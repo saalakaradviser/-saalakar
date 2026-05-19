@@ -1,30 +1,135 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saalakar Business Adviser | مشاور تجارتی سالاکار</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
-        body { font-family: 'Vazirmatn', sans-serif; }
-        .classic-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-        }
-        .force-ltr { direction: ltr !important; unicode-bidi: embed; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800 antialiased scroll-smooth">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Information</title>
 
-    <header class="classic-gradient text-white py-24 px-6 text-center shadow-lg relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <span class="bg-blue-500/20 text-blue-300 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase mb-4 inline-block border border-blue-500/30">Professional Advisory | خدمات تخصصی مشاوره</span>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight font-sans">Saalakar Business Adviser</h1>
-            
-            <div class="grid md:grid-cols-2 gap-6 mt-8 text-right border-t border-white/10 pt-6">
-                <div class="border-l border-white/10 pl-4">
-                    <p class="text-xl text-blue-100 font-light leading-relaxed">رهنمایی و مشاوره تخصصی برای رشد، توسعه و موفقیت پایدار کسب‌وکار شما.</p>
-                </div>
-                <div class="text-left md:
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 60px 20px;
+    }
+
+    .card {
+        background: linear-gradient(145deg, #111827, #0b1220);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: normal;
+        color: #9ca3af;
+        margin-bottom: 25px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    .label {
+        font-size: 13px;
+        color: #94a3b8;
+        margin-bottom: 5px;
+    }
+
+    .value {
+        font-size: 17px;
+        color: #f8fafc;
+    }
+
+    .highlight {
+        color: #38bdf8;
+        word-break: break-word;
+    }
+
+    .divider {
+        height: 1px;
+        background: rgba(255,255,255,0.08);
+        margin: 30px 0;
+    }
+
+    /* Dari section */
+    .rtl {
+        direction: rtl;
+        text-align: right;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+        .card {
+            padding: 25px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <!-- English -->
+        <section>
+            <h1>Contact Information</h1>
+            <h2>Get in touch with us anytime</h2>
+
+            <div class="section">
+                <div class="label">Email</div>
+                <div class="value highlight">saalakar.adviser@gmail.com</div>
+            </div>
+
+            <div class="section">
+                <div class="label">Phone</div>
+                <div class="value highlight">+93707450467</div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Dari -->
+        <section class="rtl" dir="rtl">
+            <h1>اطلاعات تماس</h1>
+            <h2>هر زمان با ما در تماس شوید</h2>
+
+            <div class="section">
+                <div class="label">ایمیل</div>
+                <div class="value highlight">saalakar.adviser@gmail.com</div>
+            </div>
+
+            <div class="section">
+                <div class="label">شماره تماس</div>
+                <div class="value highlight">+93707450467</div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+</body>
+</html>
