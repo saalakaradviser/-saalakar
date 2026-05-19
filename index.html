@@ -3,187 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saalakar | Contact & About</title>
+<title>SAALAKAR | Legal & Business Advisory</title>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-    body {
-        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-        background: #ffffff;
-        color: #000;
-        overflow-x: hidden;
-    }
+body{
+font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+background:#fff;
+color:#000;
+padding-top:70px;
+}
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 60px 20px;
-    }
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#fff;
+border-bottom:1px solid #000;
+display:flex;
+justify-content:center;
+gap:25px;
+padding:15px;
+z-index:999;
+}
 
-    .card {
-        border: 2px solid #000;
-        border-radius: 16px;
-        padding: 40px;
-        animation: fadeMain 1.2s ease-out;
-        transition: transform 0.3s ease;
-    }
+nav a{
+text-decoration:none;
+color:#000;
+font-weight:500;
+}
 
-    .card:hover {
-        transform: translateY(-5px);
-    }
+nav a:hover{
+color:#333;
+}
 
-    .title {
-        font-size: 32px;
-        letter-spacing: 1px;
-        animation: slideDown 1.5s ease-out;
-    }
+/* SECTIONS */
+section{
+min-height:100vh;
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
 
-    .subtitle {
-        font-size: 16px;
-        margin-top: 10px;
-        color: #333;
-        animation: fadeIn 2s ease-out;
-    }
+/* HERO */
+.hero{
+text-align:center;
+border:2px solid #000;
+padding:60px;
+border-radius:16px;
+animation:zoom 2s ease;
+}
 
-    .section {
-        margin-top: 25px;
-        padding: 15px;
-        border-left: 3px solid #000;
-        transition: all 0.4s ease;
-        animation: slideIn 2.5s ease-out;
-    }
+.hero h1{
+font-size:42px;
+}
 
-    .section:hover {
-        background: #000;
-        color: #fff;
-        transform: translateX(6px);
-    }
+.slogan{
+margin-top:15px;
+font-size:18px;
+font-weight:bold;
+opacity:0;
+animation:fade 4s ease forwards;
+}
 
-    .label {
-        font-size: 13px;
-        opacity: 0.7;
-    }
+.btn{
+margin-top:20px;
+display:inline-block;
+padding:12px 25px;
+border:2px solid #000;
+text-decoration:none;
+color:#000;
+transition:0.3s;
+}
 
-    .value {
-        font-size: 17px;
-        margin-top: 5px;
-        word-break: break-word;
-    }
+.btn:hover{
+background:#000;
+color:#fff;
+}
 
-    .divider {
-        height: 1px;
-        background: #000;
-        margin: 35px 0;
-        opacity: 0.3;
-        animation: fadeIn 3s ease-out;
-    }
+/* ABOUT */
+.box{
+border-left:4px solid #000;
+padding:20px;
+animation:fadeUp 2.5s ease;
+}
 
-    .about {
-        margin-top: 20px;
-        padding: 20px;
-        border: 1px solid #000;
-        animation: fadeUp 3.5s ease-out;
-        line-height: 1.8;
-    }
+/* SERVICES */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:20px;
+}
 
-    .about h2 {
-        margin-bottom: 10px;
-        font-size: 20px;
-    }
+.card{
+border:1px solid #000;
+padding:20px;
+transition:0.3s;
+animation:fadeUp 3s ease;
+}
 
-    .rtl {
-        direction: rtl;
-        text-align: right;
-        margin-top: 25px;
-        border-top: 1px dashed #000;
-        padding-top: 20px;
-        animation: fadeUp 4s ease-out;
-    }
+.card:hover{
+background:#000;
+color:#fff;
+}
 
-    @keyframes fadeMain {
-        from {opacity: 0; transform: scale(0.95);}
-        to {opacity: 1; transform: scale(1);}
-    }
+/* ROADMAP */
+.step{
+margin:15px 0;
+padding:15px;
+border-left:3px solid #000;
+animation:fadeUp 3s ease;
+}
 
-    @keyframes slideDown {
-        from {opacity: 0; transform: translateY(-40px);}
-        to {opacity: 1; transform: translateY(0);}
-    }
+/* CONTACT */
+.contact{
+text-align:center;
+border:2px dashed #000;
+padding:40px;
+animation:pulse 4s infinite;
+}
 
-    @keyframes slideIn {
-        from {opacity: 0; transform: translateX(-40px);}
-        to {opacity: 1; transform: translateX(0);}
-    }
+/* ANIMATIONS */
+@keyframes zoom{
+from{transform:scale(0.8);opacity:0}
+to{transform:scale(1);opacity:1}
+}
 
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
+@keyframes fade{
+to{opacity:1}
+}
 
-    @keyframes fadeUp {
-        from {opacity: 0; transform: translateY(40px);}
-        to {opacity: 1; transform: translateY(0);}
-    }
+@keyframes fadeUp{
+from{transform:translateY(40px);opacity:0}
+to{transform:translateY(0);opacity:1}
+}
 
-    @media (max-width: 600px) {
-        .card {
-            padding: 25px;
-        }
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.03)}
+100%{transform:scale(1)}
+}
 
-        .title {
-            font-size: 24px;
-        }
-    }
+/* MOBILE */
+@media(max-width:600px){
+.hero h1{font-size:26px;}
+.hero{padding:30px;}
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
-<div class="card">
+<!-- NAV -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <div class="title">⚖️ SAALAKAR | صلاکار</div>
-    <div class="subtitle">Legal & Business Advisory | مشاوره حقوقی و تجارتی</div>
+<!-- HOME -->
+<section id="home">
 
-    <div class="about">
-        <h2>About Saalakar</h2>
-        <p>
-            In today’s world, success in business depends not only on capital, but on structure, knowledge, and correct legal decisions.
-            Saalakar is here to guide businesses from idea to full growth with professional advisory services.
-        </p>
-        <br>
-        <p>
-            در دنیای امروز، موفقیت در تجارت تنها به سرمایه وابسته نیست؛ بلکه به ساختار، دانش و تصمیم‌های درست حقوقی نیاز دارد.
-            صلاکار در کنار شما است تا از مرحله فکر تا رشد کامل کسب‌وکار، راهنمایی حرفه‌ای ارائه کند.
-        </p>
-    </div>
+<div class="hero">
+<h1>⚖️ SAALAKAR | صلاکار</h1>
 
-    <div class="divider"></div>
+<p>Legal & Business Advisory | مشاوره حقوقی و تجارتی</p>
 
-    <div class="section">
-        <div class="label">Email / ایمیل</div>
-        <div class="value">saalakar.adviser@gmail.com</div>
-    </div>
+<p class="slogan">«جایی که تجارت، قانونمند ساخته می‌شود»</p>
 
-    <div class="section">
-        <div class="label">Phone / شماره تماس</div>
-        <div class="value">+93707450467</div>
-    </div>
+<p><b>We build structure, not just advice</b></p>
 
-    <div class="rtl">
-        <h2>اطلاعات بیشتر</h2>
-        <p>
-            صلاکار | مشاوره تجارتی و حقوقی یک همراه حرفه‌ای برای رشد، ساختاردهی و موفقیت کسب‌وکار شما است.
-        </p>
-    </div>
+<a class="btn" href="#contact">Request Consultation</a>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="box">
+<h2>About Saalakar | درباره صلاکار</h2>
+
+<br>
+
+<p>
+Saalakar provides legal and business advisory services focused on structured business growth.
+</p>
+
+<br>
+
+<p>
+در دنیای امروز، موفقیت در تجارت وابسته به ساختار، دانش حقوقی و تصمیم‌های درست است.
+</p>
+
+<br>
+
+<p>
+⚖️ هدف صلاکار ساختن شرکت‌های معتبر و پایدار است.
+</p>
 
 </div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+
+<h2>⚖️ Services / خدمات صلاکار</h2>
+
+<div class="grid">
+
+<div class="card">✔ مشاوره حقوقی و تجارتی</div>
+<div class="card">✔ ترتیب قراردادها و اسناد رسمی</div>
+<div class="card">✔ مدیریت و ساختار شرکت‌ها</div>
+<div class="card">✔ بازاریابی و برند سازی</div>
+<div class="card">✔ جذب سرمایه‌گذار</div>
+<div class="card">✔ توسعه کاروبار</div>
+
 </div>
+
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+
+<h2>🧭 Website Roadmap</h2>
+
+<div class="step">Define Goal</div>
+<div class="step">Build Structure</div>
+<div class="step">Brand Identity</div>
+<div class="step">Develop Services</div>
+<div class="step">SEO Optimization</div>
+<div class="step">Launch & Growth</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="contact">
+<h2>📞 Contact SAALAKAR</h2>
+
+<p>Email: saalakar.adviser@gmail.com</p>
+<p>Phone: +93707450467</p>
+
+<br>
+
+<p><b>We respond quickly to all inquiries</b></p>
+</div>
+
+</section>
 
 </body>
 </html>
