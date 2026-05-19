@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
+<title>Saalakar | Contact & About</title>
 
 <style>
     * {
@@ -16,20 +16,20 @@
         font-family: "Segoe UI", Tahoma, Arial, sans-serif;
         background: #ffffff;
         color: #000;
+        overflow-x: hidden;
     }
 
     .container {
-        max-width: 850px;
+        max-width: 900px;
         margin: auto;
         padding: 60px 20px;
     }
 
     .card {
         border: 2px solid #000;
+        border-radius: 16px;
         padding: 40px;
-        border-radius: 14px;
-        background: #fff;
-        animation: fadeIn 1.2s ease-in-out;
+        animation: fadeMain 1.2s ease-out;
         transition: transform 0.3s ease;
     }
 
@@ -37,30 +37,31 @@
         transform: translateY(-5px);
     }
 
-    h1 {
-        font-size: 30px;
-        margin-bottom: 10px;
+    .title {
+        font-size: 32px;
         letter-spacing: 1px;
+        animation: slideDown 1.5s ease-out;
     }
 
-    h2 {
-        font-size: 15px;
-        font-weight: normal;
-        margin-bottom: 30px;
+    .subtitle {
+        font-size: 16px;
+        margin-top: 10px;
         color: #333;
+        animation: fadeIn 2s ease-out;
     }
 
     .section {
-        margin-bottom: 22px;
-        padding: 12px;
+        margin-top: 25px;
+        padding: 15px;
         border-left: 3px solid #000;
-        transition: all 0.3s ease;
+        transition: all 0.4s ease;
+        animation: slideIn 2.5s ease-out;
     }
 
     .section:hover {
         background: #000;
         color: #fff;
-        transform: translateX(5px);
+        transform: translateX(6px);
     }
 
     .label {
@@ -69,34 +70,64 @@
     }
 
     .value {
-        font-size: 18px;
-        margin-top: 4px;
+        font-size: 17px;
+        margin-top: 5px;
         word-break: break-word;
     }
 
     .divider {
         height: 1px;
         background: #000;
-        margin: 30px 0;
+        margin: 35px 0;
         opacity: 0.3;
+        animation: fadeIn 3s ease-out;
+    }
+
+    .about {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #000;
+        animation: fadeUp 3.5s ease-out;
+        line-height: 1.8;
+    }
+
+    .about h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
     }
 
     .rtl {
         direction: rtl;
         text-align: right;
+        margin-top: 25px;
         border-top: 1px dashed #000;
         padding-top: 20px;
+        animation: fadeUp 4s ease-out;
+    }
+
+    @keyframes fadeMain {
+        from {opacity: 0; transform: scale(0.95);}
+        to {opacity: 1; transform: scale(1);}
+    }
+
+    @keyframes slideDown {
+        from {opacity: 0; transform: translateY(-40px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideIn {
+        from {opacity: 0; transform: translateX(-40px);}
+        to {opacity: 1; transform: translateX(0);}
     }
 
     @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: scale(0.95);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes fadeUp {
+        from {opacity: 0; transform: translateY(40px);}
+        to {opacity: 1; transform: translateY(0);}
     }
 
     @media (max-width: 600px) {
@@ -104,7 +135,7 @@
             padding: 25px;
         }
 
-        h1 {
+        .title {
             font-size: 24px;
         }
     }
@@ -114,39 +145,44 @@
 <body>
 
 <div class="container">
-    <div class="card">
+<div class="card">
 
-        <h1>Contact Information</h1>
-        <h2>Professional consulting services — reach out anytime</h2>
+    <div class="title">⚖️ SAALAKAR | صلاکار</div>
+    <div class="subtitle">Legal & Business Advisory | مشاوره حقوقی و تجارتی</div>
 
-        <div class="section">
-            <div class="label">Email</div>
-            <div class="value">saalakar.adviser@gmail.com</div>
-        </div>
-
-        <div class="section">
-            <div class="label">Phone</div>
-            <div class="value">+93707450467</div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="rtl">
-            <h1>اطلاعات تماس</h1>
-            <h2>خدمات مشورتی حرفه‌ای — هر زمان در تماس شوید</h2>
-
-            <div class="section">
-                <div class="label">ایمیل</div>
-                <div class="value">saalakar.adviser@gmail.com</div>
-            </div>
-
-            <div class="section">
-                <div class="label">شماره تماس</div>
-                <div class="value">+93707450467</div>
-            </div>
-        </div>
-
+    <div class="about">
+        <h2>About Saalakar</h2>
+        <p>
+            In today’s world, success in business depends not only on capital, but on structure, knowledge, and correct legal decisions.
+            Saalakar is here to guide businesses from idea to full growth with professional advisory services.
+        </p>
+        <br>
+        <p>
+            در دنیای امروز، موفقیت در تجارت تنها به سرمایه وابسته نیست؛ بلکه به ساختار، دانش و تصمیم‌های درست حقوقی نیاز دارد.
+            صلاکار در کنار شما است تا از مرحله فکر تا رشد کامل کسب‌وکار، راهنمایی حرفه‌ای ارائه کند.
+        </p>
     </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="label">Email / ایمیل</div>
+        <div class="value">saalakar.adviser@gmail.com</div>
+    </div>
+
+    <div class="section">
+        <div class="label">Phone / شماره تماس</div>
+        <div class="value">+93707450467</div>
+    </div>
+
+    <div class="rtl">
+        <h2>اطلاعات بیشتر</h2>
+        <p>
+            صلاکار | مشاوره تجارتی و حقوقی یک همراه حرفه‌ای برای رشد، ساختاردهی و موفقیت کسب‌وکار شما است.
+        </p>
+    </div>
+
+</div>
 </div>
 
 </body>
